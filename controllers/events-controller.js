@@ -48,7 +48,7 @@ const createNewEvent = (req, res) =>{
     const newEvent = {
         event_name: req.body.event_name,
         event_description: req.body.event_description,
-        event_date: req.body.event_date,
+        event_date: req.body.event_date.split('T')[0],
         event_category: req.body.event_category,
         user_id: req.body.user_id,
     };
@@ -56,7 +56,7 @@ const createNewEvent = (req, res) =>{
     knex('events')
         .insert(newEvent)
         .then(() => {
-            return knex('events').where({})
+            return knex('events').where({}).first();
         })
         .then ((createdNewEvent)=>{
             return res.status(201).json(createdNewEvent[0]);
@@ -67,8 +67,25 @@ const createNewEvent = (req, res) =>{
         });
 };
 
+const deleteEvent =(req, res) => {
+    const eventId = req.params.id;
+    knex('events')
+        .where('id',eventId)
+        .del()
+        .then(deleteSelectedEvent => {
+            if (deleteSelectedEvent === 0) {
+                return res.status(404).json({message: `Event with Id ${eventId} was not found`})
+            }res.status(204).send();
+        })
+        .catch((error)=>{
+            console.error(error);
+            return res.status(500).json({message: `Unable to delete Event`})
+        })
+}
+
 module.exports ={
     getEventList,
     getEventById, 
-    createNewEvent
+    createNewEvent,
+    deleteEvent
 };
