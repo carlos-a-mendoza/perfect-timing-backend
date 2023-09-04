@@ -63,8 +63,87 @@ const getUserInfo = (req, res) => {
     }); 
 };
 
+const getUserGroupsImInvolvedIn = (req, res) => {
+    const userId = req.params.id;
+    knex("usergroups")
+    .where({user_id: userId})
+    .select(
+        "group_name",
+        "user_id",
+    )
+    .then((data)=>{
+        return res.status(200).json(data);
+    })
+    .catch((error)=>{
+        return res.status(400).send(`Error retrieving groups: ${error}`)
+    });
+};
+
+const allGroups = (req, res) => {
+    knex("usergroups")
+    .select(
+        "group_name",
+        "user_id",
+    )
+    .then((data)=>{
+        return res.status(200).json(data);
+    })
+    .catch((error)=>{
+        return res.status(400).send(`Error retrieving groups: ${error}`)
+    });
+};
+
+const getUsersInGroup = (req, res) =>{
+    const groupName = req.params.group_name;
+    knex("usergroups")
+    .where({group_name: groupName})
+    .then((groupMembers)=>{
+        const userIds = groupMembers.map((user)=>user.user_id);
+
+        //Obtain Events for each user
+        const memberEvents = userIds.map((userId)=>{
+            return knex("events").where("user_id", userId)
+        });
+
+        Promise.all(memberEvents)
+            .then((eventLists)=>{
+                const usersWithEvents = userIds.map((userId, index) =>({
+                    user_id: userId,
+                    events: eventLists[index],
+                }));
+                return res.status(200).json(usersWithEvents);
+            })
+            .catch((error)=>{
+                console.error(error);
+                res.status(400).send(`Cannot obtain events from these users`)
+            })
+    })
+    .catch((error)=>{
+        return res.status(400).send(`Error retrieving users in this group: ${error}`)
+    });
+}
+
+const addUserToGroup = (req, res) =>{
+    const {group_name, user_id} = req.body;
+    if(!group_name || !user_id) {
+        return res.status(400).send(`Error: group name and user id are required `)
+    }
+    knex('usergroups')
+    .insert({group_name, user_id})
+    .then(()=>{
+        res.status(201).send(`User has been added to the group`)
+    })
+    .catch((error)=>{
+        res.status(400).send('Cannot add user to group')
+    })
+}
+
 module.exports = {
     getEventListByUser, 
     getAllUsersInfo,
-    getUserInfo
+    getUserInfo,
+    getUserGroupsImInvolvedIn,
+    allGroups,
+    getUsersInGroup, 
+    addUserToGroup,
 }
