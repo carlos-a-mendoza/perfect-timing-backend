@@ -80,13 +80,39 @@ const getUserGroupsImInvolvedIn = (req, res) => {
 };
 
 const allGroups = (req, res) => {
-    knex("usergroups")
+    knex
     .select(
-        "group_name",
-        "user_id",
+        "usergroups.group_name",
+        "users.id",
+        "users.user_first_name",
+        "users.user_last_name",
     )
+    .from("usergroups")
+    .join("users", "usergroups.user_id", "users.id")
     .then((data)=>{
-        return res.status(200).json(data);
+        const groups = data.reduce((output, user)=>{
+            const groupIndex = output.findIndex((group) => group.group_name === user.group_name);
+            if(groupIndex === -1) {
+                output.push({
+                    group_name:user.group_name,
+                    users:[
+                        {
+                            id: user.id,
+                            user_first_name: user.user_first_name,
+                            user_last_name: user.user_last_name,
+                        },
+                    ],
+                });
+            }else {
+                output[groupIndex].users.push({
+                    id: user.id,
+                    user_first_name: user.user_first_name,
+                    user_last_name: user.user_last_name,
+                });
+            }
+            return output; 
+        }, []);
+        return res.status(200).json(groups);
     })
     .catch((error)=>{
         return res.status(400).send(`Error retrieving groups: ${error}`)

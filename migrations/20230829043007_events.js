@@ -21,6 +21,7 @@ exports.up = function (knex) {
         table.string("user_interests").notNullable();
         table.string("user_groups").notNullable();
         table.string("user_description", 600).notNullable();
+        table.string("user_image_url");
       })
       .createTable("userGroups", (table) =>{
         table.increments("id").primary();
