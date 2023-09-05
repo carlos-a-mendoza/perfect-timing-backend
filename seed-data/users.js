@@ -18,7 +18,7 @@ module.exports = [
         user_description: "Hey, I'm Elaine! I have a love for basketball and a knack for interior design. In the winter, you'll find me shredding the slopes while snowboarding, and I'm a baking enthusiast in the kitchen. I'm part of the Gym, Winter Sports, Foodie, Pastry Chef, and Toronto communities.",
         user_interests: JSON.stringify(["Basketball", "Interior Design", "Snowboarding", "Baking"]),
         user_groups: JSON.stringify(["Gym", "Winter Sports", "Foodie", "Pastry Chef", "Toronto"]),
-        user_image_url: "./images/profile4.JPG",
+        user_image_url: "/images/profile4.JPG",
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ module.exports = [
         user_description: "Hello, I'm Mike! I'm a gaming enthusiast who also finds zen in yoga and spinning. I'm a skilled archer, too! Outside of my interests, I'm part of the Foodie, Rock Climbing, Muay Thai, and Urban Exploration communities.",
         user_interests: JSON.stringify(["Gaming", "Yoga", "Spinning", "Archery"]),
         user_groups: JSON.stringify(["Foodie", "Rock Climbing", "Muay Thai", "Urban Exploration"]),
-        user_image_url: "./images/profile2.JPG",
+        user_image_url: "/images/profile2.JPG",
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ module.exports = [
         user_description: "Hey, I'm Sarah! I have a passion for photography, and I love experimenting in the kitchen while cooking up delicious meals. When I'm not behind the camera or in the kitchen, you can find me hiking or working on my next painting. I'm part of the Nature Lovers, Cooking Enthusiasts, and Art Club communities.",
         user_interests: JSON.stringify(["Photography", "Cooking", "Hiking", "Painting"]),
         user_groups: JSON.stringify(["Nature Lovers", "Cooking Enthusiasts", "Art Club"]),
-        user_image_url: "./images/profile3.JPG",
+        user_image_url: "/images/profile3.JPG",
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ module.exports = [
         user_description: "Hi, I'm Daniel! I'm an avid reader and a soccer fanatic. I enjoy peaceful days fishing by the lake and camping in the great outdoors. I'm part of the Bookworms, Sports Fans, and Outdoor Adventurers communities.",
         user_interests: JSON.stringify(["Reading", "Soccer", "Fishing", "Camping"]),
         user_groups: JSON.stringify(["Bookworms", "Sports Fans", "Outdoor Adventurers"]),
-        user_image_url: "./images/profile5.JPG",
+        user_image_url: "/images/profile5.JPG",
     },
     {
         id: 6,
@@ -62,7 +62,7 @@ module.exports = [
         user_description: "Hello there, I'm Emily! I find joy in dancing and exploring new places through travel. Meditation helps me stay grounded, and I'm quite the swimmer too. I'm a proud member of the Dance Enthusiasts, Wanderlust Explorers, and Mindfulness Club communities.",
         user_interests: JSON.stringify(["Dancing", "Traveling", "Meditation", "Swimming"]),
         user_groups: JSON.stringify(["Dance Enthusiasts", "Wanderlust Explorers", "Mindfulness Club"]),
-        user_image_url: "./images/profile6.JPG",
+        user_image_url: "/images/profile6.JPG",
     },
     {
         id: 7,
@@ -73,7 +73,7 @@ module.exports = [
         user_description: "Hi, I'm Alex! I'm passionate about golfing and enjoy experimenting with new recipes in the kitchen. I'm also a photography enthusiast and have a green thumb for gardening. I'm part of the Golfers, Culinary Creators, Shutterbugs, and Green Thumbs communities.",
         user_interests: JSON.stringify(["Golf", "Cooking", "Photography", "Gardening"]),
         user_groups: JSON.stringify(["Golfers", "Culinary Creators", "Shutterbugs", "Green Thumbs"]),
-        user_image_url: "./images/profile7.JPG",
+        user_image_url: "/images/profile7.JPG",
     },
     {
         id: 8,
@@ -84,7 +84,7 @@ module.exports = [
         user_description: "Hello, I'm Olivia! I find inspiration in painting and practicing yoga. I'm an outdoor enthusiast who loves hiking and a board game enthusiast in my downtime. I'm part of the Art Enthusiasts, Yogis, Outdoor Enthusiasts, and Board Gamers communities.",
         user_interests: JSON.stringify(["Painting", "Yoga", "Hiking", "Board Games"]),
         user_groups: JSON.stringify(["Art Enthusiasts", "Yogis", "Outdoor Enthusiasts", "Board Gamers"]),
-        user_image_url: "../../assets/images/profile6.JPG",
+        user_image_url: "/images/profile6.JPG",
     },
     {
         id: 9,
@@ -95,7 +95,7 @@ module.exports = [
         user_description: "Hey there, I'm Lucas! I'm a basketball fan and a dedicated reader. My culinary explorations in the kitchen keep me busy, and I'm always up for new travel adventures. I'm part of the Hoops Fans, Book Club, Culinary Explorers, and Wanderlust communities.",
         user_interests: JSON.stringify(["Basketball", "Reading", "Cooking", "Travelling"]),
         user_groups: JSON.stringify(["Hoops Fans", "Book Club", "Culinary Explorers", "Wanderlust"]),
-        user_image_url: "./public/images/profile10.JPG",
+        user_image_url: "/images/profile10.JPG",
     },
     {
         id: 10,
@@ -106,7 +106,7 @@ module.exports = [
         user_description: "Hi, I'm Ava! I'm passionate about singing and cycling through scenic routes. I have a keen eye for photography, and I love exploring the underwater world through scuba diving. I'm part of the Singing Enthusiasts, Cyclists, Shutterbugs, and Scuba Divers communities.",
         user_interests: JSON.stringify(["Singing", "Cycling", "Photography", "Scuba Diving"]),
         user_groups: JSON.stringify(["Singing Enthusiasts", "Cyclists", "Shutterbugs", "Scuba Divers"]),
-        user_image_url: "./images/profile4.JPG",
+        user_image_url: "/images/profile4.JPG",
     },
     {
         id: 11,
@@ -117,7 +117,7 @@ module.exports = [
         user_description: "Hello, I'm Liam! I'm a football fanatic and a gamer at heart. I enjoy cooking up culinary delights and hiking in the great outdoors. I'm part of the Football Fanatics, Gamers United, Culinary Artists, and Adventure Seekers communities.",
         user_interests: JSON.stringify(["Football", "Gaming", "Cooking", "Hiking"]),
         user_groups: JSON.stringify(["Football Fanatics", "Gamers United", "Culinary Artists", "Adventure Seekers"]),
-        user_image_url: "./images/profile8.JPG",
+        user_image_url: "/images/profile8.JPG",
     },
     {
         id: 12,
@@ -128,7 +128,7 @@ module.exports = [
         user_description: "Hey, I'm Sophia! I express myself through dance and capture moments through photography. Yoga and meditation keep me balanced and mindful. I'm part of the Dance Lovers, Shutterbugs, Yogis, and Mindfulness Practitioners communities.",
          user_interests: JSON.stringify(["Dancing", "Photography", "Yoga", "Meditation"]),
         user_groups: JSON.stringify(["Dance Lovers", "Shutterbugs", "Yogis", "Mindfulness Practitioners"]),
-        user_image_url: "./images/profile1.JPG",
+        user_image_url: "/images/profile1.JPG",
     },
     {
         id: 13,
@@ -139,6 +139,6 @@ module.exports = [
         user_description: "Hi there, I'm Mason! I'm an avid golfer and soccer enthusiast. Cycling is another passion, and I enjoy relaxing days fishing by the water. I'm part of the Golf Enthusiasts, Soccer Fans, Cyclists Club, and Fishing Enthusiasts communities.",
         user_interests: JSON.stringify(["Golf", "Soccer", "Cycling", "Fishing"]),
         user_groups: JSON.stringify(["Golf Enthusiasts", "Soccer Fans", "Cyclists Club", "Fishing Enthusiasts"]),
-        user_image_url: "./images/profile2.JPG",
+        user_image_url: "/images/profile2.JPG",
     },
 ]
