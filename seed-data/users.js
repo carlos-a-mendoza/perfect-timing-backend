@@ -8,6 +8,7 @@ module.exports = [
         user_description: "Hi there! I'm Erika, a passionate gamer who loves painting and capturing beautiful moments through photography. When I'm not gaming, you can find me on the football field or exploring the world of music. I'm also a proud member of the Foodie, League of Legends, Web Development, Rock Climbing, and Strava communities.",
         user_interests: JSON.stringify(["Gaming", "Painting", "Photography", "Football", "Music"]),
         user_groups: JSON.stringify(["Foodie", "League of Legends", "Web Development", "Rock Climbing", "Strava"]),
+        user_image_url: "/images/profile1.JPG",
     },
     {
         id: 2,
@@ -29,7 +30,7 @@ module.exports = [
         user_description: "Hello, I'm Mike! I'm a gaming enthusiast who also finds zen in yoga and spinning. I'm a skilled archer, too! Outside of my interests, I'm part of the Foodie, Rock Climbing, Muay Thai, and Urban Exploration communities.",
         user_interests: JSON.stringify(["Gaming", "Yoga", "Spinning", "Archery"]),
         user_groups: JSON.stringify(["Foodie", "Rock Climbing", "Muay Thai", "Urban Exploration"]),
-        user_image_url: "/images/profile2.JPG",
+        user_image_url: "/images/profile12.JPG",
     },
     {
         id: 4,
@@ -62,7 +63,7 @@ module.exports = [
         user_description: "Hello there, I'm Emily! I find joy in dancing and exploring new places through travel. Meditation helps me stay grounded, and I'm quite the swimmer too. I'm a proud member of the Dance Enthusiasts, Wanderlust Explorers, and Mindfulness Club communities.",
         user_interests: JSON.stringify(["Dancing", "Traveling", "Meditation", "Swimming"]),
         user_groups: JSON.stringify(["Dance Enthusiasts", "Wanderlust Explorers", "Mindfulness Club"]),
-        user_image_url: "/images/profile6.JPG",
+        user_image_url: "/images/profile11.JPG",
     },
     {
         id: 7,
@@ -128,7 +129,7 @@ module.exports = [
         user_description: "Hey, I'm Sophia! I express myself through dance and capture moments through photography. Yoga and meditation keep me balanced and mindful. I'm part of the Dance Lovers, Shutterbugs, Yogis, and Mindfulness Practitioners communities.",
          user_interests: JSON.stringify(["Dancing", "Photography", "Yoga", "Meditation"]),
         user_groups: JSON.stringify(["Dance Lovers", "Shutterbugs", "Yogis", "Mindfulness Practitioners"]),
-        user_image_url: "/images/profile1.JPG",
+        user_image_url: "/images/profile13.JPG",
     },
     {
         id: 13,

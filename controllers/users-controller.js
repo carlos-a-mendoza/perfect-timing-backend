@@ -86,6 +86,7 @@ const allGroups = (req, res) => {
         "users.id",
         "users.user_first_name",
         "users.user_last_name",
+        "users.user_image_url",
     )
     .from("usergroups")
     .join("users", "usergroups.user_id", "users.id")
@@ -100,6 +101,7 @@ const allGroups = (req, res) => {
                             id: user.id,
                             user_first_name: user.user_first_name,
                             user_last_name: user.user_last_name,
+                            user_image_url: user.user_image_url,
                         },
                     ],
                 });
@@ -108,6 +110,7 @@ const allGroups = (req, res) => {
                     id: user.id,
                     user_first_name: user.user_first_name,
                     user_last_name: user.user_last_name,
+                    user_image_url: user.user_image_url,
                 });
             }
             return output; 
